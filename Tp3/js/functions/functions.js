@@ -81,11 +81,11 @@ function formatJson(tabHtmlElement, id = false) {
             date: formatDate
         };
         if (id === false) {
-            postJson(JSON.stringify(json));
+            httpServices.postJson(JSON.stringify(json));
         } else {
             id = tabHtmlElement[5]
             json = Object.assign({ "id": id }, json);
-            putJson(id, JSON.stringify(json));
+            httpServices.putJson(id, JSON.stringify(json));
         }
     } else {
         demo(2000);
@@ -120,13 +120,13 @@ function fillInputByMatch(input) {
     }
 }
 
-function getJsonByInput() {
+async function getJsonByInput() {
     let valueSizeData = document.querySelector("#sizeData").value;
     let valuePageData = document.querySelector("#pageData").value;
     let valueSelect = document.querySelector("#sort-select").value;
     if (valueSizeData != "" && valuePageData != "") {
         deleteHtmlElement("table");
-        getJson(valueSizeData, valuePageData, valueSelect);
+        await httpServices.getJson(valueSizeData, valuePageData, valueSelect);
     } else {
         demo(2000);
     }

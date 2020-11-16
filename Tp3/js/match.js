@@ -5,10 +5,10 @@ class Match {
         this.score = score;
         this.visitorTeam = visitorTeam;
         this.date = date;
-        this.getVainqueurLooser();
-    }
+        this.getWinerLooser();
+    };
 
-    getVainqueurLooser() {
+    getWinerLooser() {
         if (this.score[0] > this.score[1]) {
             this.vainqueur = this.homeTeam;
             this.looser = this.visitorTeam;
@@ -18,5 +18,5 @@ class Match {
         } else {
             this.vainqueur = "Égalité";
         }
-    }
+    };
 }

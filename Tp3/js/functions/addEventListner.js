@@ -19,7 +19,7 @@ function buttonsDelEventListnerCreator() {
     buttonsDel.forEach((element) => {
         element.addEventListener("click", () => {
             if (confirm("voulez vous vraiment supprimer le match ?")) {
-                delJson(element.value);
+                httpServices.delJson(element.value);
             };
         });
     });
