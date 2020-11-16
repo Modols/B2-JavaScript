@@ -58,7 +58,6 @@ function iterateEventListner(element) {
 
 function getAllInput(htmlElement) {
     let tabValue = [];
-
     tabValue.slice.call(htmlElement).forEach((el, i) => {
         if (el.value === "id") {
             tabValue.push(el.id);
@@ -83,7 +82,7 @@ function formatJson(tabHtmlElement, id = false) {
         if (id === false) {
             httpServices.postJson(JSON.stringify(json));
         } else {
-            id = tabHtmlElement[5]
+            id = tabHtmlElement[5];
             json = Object.assign({ "id": id }, json);
             httpServices.putJson(id, JSON.stringify(json));
         }
@@ -104,8 +103,7 @@ function fillInputByMatch(input) {
         let exist = document.querySelector(`input[name="${key}"]`);
         if (exist) {
             if (key === "date") {
-                newValue = value.split('Z').shift()
-                exist.value = newValue;
+                exist.value = value.split('Z').shift();
             } else {
                 exist.value = value;
             }
@@ -139,5 +137,5 @@ function sleep(ms) {
 async function demo(ms) {
     displayError("Merci de remplir tous les champs");
     await sleep(ms);
-    deleteHtmlElement("#errorMessage")
+    deleteHtmlElement("#errorMessage");
 }
