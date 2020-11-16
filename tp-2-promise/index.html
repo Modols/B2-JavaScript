@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Titre de la page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/axentix@1.0.0-beta.2/dist/css/axentix.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <span>Rechercher un éléve par nom</span>
+    <form>
+        <input type="search" id="searchBar" placeholder="Search a Student" >
+        <button id="searchButton">Search</button>
+    </form>
+    <span>Ajouter un éléve :</span>
+    <form>
+        <input id="nom" placeholder="nom" required>
+        <input id="prenom" placeholder="prenom" required>
+        <input type="number" id="age" placeholder="age" required>
+        <button id="send">Send</button>
+    </form>
+    <br>
+    <span>Listes des éléves : </span>
+    <ul>
+    </ul>
+    
+    <div>
+        <span>Valider l'appel : <button id="appel">Valider</button></span>
+    </div>
+
+    <ul id="ulPresent"></ul>
+    
+    <script src="https://cdn.jsdelivr.net/npm/axentix@1.0.0-beta.2/dist/js/axentix.min.js"></script>
+    <script src="js/http.service.js"></script>
+    <script src="js/functions.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

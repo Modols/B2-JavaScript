@@ -1,0 +1,23 @@
+[
+    {
+        "prenom": "Leo",
+        "nom": "Laurens",
+        "age": 24
+    },
+    {
+        "prenom": "Zazon",
+        "nom": "Array",
+        "age": 700
+    },
+    {
+        "prenom": "Lucas",
+        "nom": "Matos",
+        "age": 19
+    },
+    {
+        "prenom": "Thomas",
+        "nom": "Modolos",
+        "age": 20
+
+    }
+]

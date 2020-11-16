@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Titre de la page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h2>TP3</h2>
+    <div id="errorMessage"></div>
+    <br>
+    <form>
+        <label for="nMatch">Nombre de matchs</label>
+        <input type="number" id="sizeData" name="nMatch" value="10" min="1" max="50"><br><br>
+        <label for="nPage">Nombre de page</label>
+        <input type="number" id="pageData" name="nPage" value="1" min="0" ><br><br>
+        <label for="sort-select">Choisissez un type de tri :</label>
+        
+        <select  id="sort-select">
+            <option value="homeTeam">Home Team</option>
+            <option value="score">Score</option>
+            <option value="visitorTeam">Visitor Team</option>
+            <option value="date">Date</option>
+        </select>
+        
+        <button id="submitLoadData">Submit</button>
+    </form>
+    <br>
+    <form>
+        <input type="button" id="buttonAjouter" value="Ajouter">
+    </form>
+    <br>
+    <form id="formAjouter" class="hidden">
+        <input type="text" placeholder="Home Team" required>
+        <input type="number" placeholder="Score Home Team" required>
+        <input type="text" placeholder="Visitor Team" required>
+        <input type="number" placeholder="Score Visitor Team" required>
+        <input type="datetime-local" required>
+        <button id="submitAjouter">Submit</button>
+    </form>
+    <form id="formModif" class="hidden">
+        <input type="text" name="homeTeam" placeholder="Home Team" value="" required>
+        <input type="number" name="score[0]" placeholder="Score Home Team" value="" required>
+        <input type="text" name="visitorTeam" placeholder="Visitor Team" value="" required>
+        <input type="number" name="score[1]" placeholder="Score Visitor Team" value="" required>
+        <input type="datetime-local" name="date" value="" required>
+        <input type="text" name="idInputModif" id="" class="hidden" value="id" readonly>
+        <button id="submitModif">Submit</button>
+    </form>
+    
+    
+    <table class="center"></table>
+    <section>
+        <script src="https://kit.fontawesome.com/1fcf4e59df.js" crossorigin="anonymous"></script>
+        <script src="js/http.service.js"></script>
+        <script src="js/functions/http.function.request.js"></script>
+        <script src="js/match.js"></script>
+        <script src="js/functions/createTd.js"></script>
+        <script src="js/functions/addEventListner.js"></script>
+        <script src="js/functions/functions.js"></script> 
+        <script src="js/main.js"></script>
+    </section>
+</body>
+
+</html>
